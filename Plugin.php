@@ -4,9 +4,10 @@
  * Syntax Highlighter for Typecho
  * 
  * @package Syntax Highlighter
- * @author Tinpont
- * @version 0.0.2
- * @link http://www.tinpont.com
+ * @author XiaZhanjian & Tinpont
+ * @version 0.0.3
+ * @link https://www.xiazhanjian.com
+ * @将Tinpont插件版本的地址全部用七牛CDN代替,并删除新版本没有的语法刷
  */
 class SyntaxHighlighter_Plugin implements Typecho_Plugin_Interface {
 
@@ -94,8 +95,8 @@ class SyntaxHighlighter_Plugin implements Typecho_Plugin_Interface {
         $currentPath = Helper::options()->pluginUrl . '/SyntaxHighlighter/';
 
         echo '<script type="text/javascript" src="' . $currentPath . 'scripts/shCore.min.js"></script>' . "\n";
-        echo '<script type="text/javascript" src="' . $currentPath . 'scripts/shAutoloader.js"></script>' . "\n";
-        echo '<link rel="stylesheet" type="text/css" href="' . $currentPath . 'styles/shCore' . $settings->theme . '.css" />' . "\n";
+        echo '<script type="text/javascript" src="https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shAutoloader.js"></script>' . "\n";
+        echo '<link rel="stylesheet" type="text/css" href="'.'https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/styles/shCore' . $settings->theme . '.css" />' . "\n";
     }
 
     /**
@@ -152,33 +153,31 @@ class SyntaxHighlighter_Plugin implements Typecho_Plugin_Interface {
                     }
                 }
                 SyntaxHighlighter.autoloader(
-                        'applescript           {$currentPath}scripts/shBrushAppleScript.js',
-                        'ahk autohotkey        {$currentPath}scripts/shBrushAhk.js',
-                        'actionscript3 as3     {$currentPath}scripts/shBrushAS3.js',
-                        'bash shell            {$currentPath}scripts/shBrushBash.js',
-                        'bat cmd batch         {$currentPath}scripts/shBrushBat.js',
-                        'coldfusion cf         {$currentPath}scripts/shBrushColdFusion.js',
-                        'cpp c                 {$currentPath}scripts/shBrushCpp.js',
-                        'c# c-sharp csharp     {$currentPath}scripts/shBrushCSharp.js',
-                        'css                   {$currentPath}scripts/shBrushCss.js',
-                        'delphi pascal pas     {$currentPath}scripts/shBrushDelphi.js',
-                        'diff patch            {$currentPath}scripts/shBrushDiff.js',
-                        'erl erlang            {$currentPath}scripts/shBrushErlang.js',
-                        'groovy                {$currentPath}scripts/shBrushGroovy.js',
-                        'java                  {$currentPath}scripts/shBrushJava.js',
-                        'jfx javafx            {$currentPath}scripts/shBrushJavaFX.js',
-                        'js jscript javascript {$currentPath}scripts/shBrushJScript.js',
-                        'perl pl               {$currentPath}scripts/shBrushPerl.js',
-                        'php                   {$currentPath}scripts/shBrushPhp.js',
-                        'text plain            {$currentPath}scripts/shBrushPlain.js',
-                        'powershell ps         {$currentPath}scripts/shBrushPowerShell.js',
-                        'py python             {$currentPath}scripts/shBrushPython.js',
-                        'ruby rails ror rb     {$currentPath}scripts/shBrushRuby.js',
-                        'sass scss             {$currentPath}scripts/shBrushSass.js',
-                        'scala                 {$currentPath}scripts/shBrushScala.js',
-                        'sql                   {$currentPath}scripts/shBrushSql.js',
-                        'vb vbnet              {$currentPath}scripts/shBrushVb.js',
-                        'xml xhtml xslt html   {$currentPath}scripts/shBrushXml.js'
+                        'applescript           https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushAppleScript.js',
+                        'actionscript3 as3     https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushAS3.js',
+                        'bash shell            https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushBash.js',
+                        'coldfusion cf         https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushColdFusion.js',
+                        'cpp c                 https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushCpp.js',
+                        'c# c-sharp csharp     https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushCSharp.js',
+                        'css                   https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushCss.js',
+                        'delphi pascal pas     https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushDelphi.js',
+                        'diff patch            https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scriptsshBrushDiff.js',
+                        'erl erlang            https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushErlang.js',
+                        'groovy                https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushGroovy.js',
+                        'java                  https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushJava.js',
+                        'jfx javafx            https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushJavaFX.js',
+                        'js jscript javascript https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js',
+                        'perl pl               https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushPerl.js',
+                        'php                   https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.js',
+                        'text plain            https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushPlain.js',
+                        'powershell ps         https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushPowerShell.js',
+                        'py python             https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushPython.js',
+                        'ruby rails ror rb     https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushRuby.js',
+                        'sass scss             https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushSass.js',
+                        'scala                 https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushScala.js',
+                        'sql                   https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushSql.js',
+                        'vb vbnet              https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushVb.js',
+                        'xml xhtml xslt html   https://cdn.staticfile.org/SyntaxHighlighter/3.0.83/scripts/shBrushXml.js'
                         );
                 SyntaxHighlighter.defaults['auto-links'] = $autoLinks;
                 SyntaxHighlighter.defaults['collapse'] = $collapse;

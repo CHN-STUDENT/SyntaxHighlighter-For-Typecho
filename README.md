@@ -1,7 +1,16 @@
 SyntaxHighlighter-For-Typecho
 =============================
+### 修改内容
 
-著名代码高亮插件[SyntaxHighlighter][2] Typecho移植版，同时支持0.8、0.9、1.0
+- 将SyntaxHighlighter的除核心js之外全部使用七牛CDN修改替换，减轻服务器负担。
+- 去掉了新版本没有的语言格式刷
+
+### 未来目标
+- 研究核心js工作原理和尝试修改优化。
+
+------------
+
+著名代码高亮插件[SyntaxHighlighter][2] Typecho移植版，同时支持0.8、0.9、1.0 、1.1
 
 本插件基于[Tolbkni Kao][1]的Syntax Highlighter for Typecho 0.8修改
 
